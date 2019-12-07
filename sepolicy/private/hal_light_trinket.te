@@ -1,0 +1,8 @@
+type hal_light_realme, coredomain, domain;
+hal_server_domain(hal_light_realme, hal_light)
+
+type hal_light_realme_exec, exec_type, file_type;
+init_daemon_domain(hal_light_realme)
+
+allow hal_light_realme sysfs_white_led:file rw_file_perms;
+allow hal_light_realme sysfs_white_led:dir search;
